@@ -162,8 +162,10 @@ if analyze_button:
                         st.session_state.recommendations = recommendations
                 
                 st.success("Analysis completed successfully!")
+        except Exception as e:
+            show_error(str(e))  # Esta línea falta en el código original
 
-# Display results if available
+# Display results if available - esta sección debe estar fuera del bloque try
 if st.session_state.url_analysis_results:
     st.markdown("---")
     
